@@ -1,0 +1,245 @@
+.comic-block {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px dotted #f4f4f4; }
+  .comic-block > .media-inset {
+    width: 200px;
+    text-align: center; }
+
+.comic-page-grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  align-items: baseline;
+  list-style-type: none;
+  margin: 1em;
+  padding: 0; }
+  .comic-page-grid > li {
+    -webkit-box-flex: 1 0 calc(200px + 1em);
+    -webkit-flex: 1 0 calc(200px + 1em);
+    -moz-box-flex: 1 0 calc(200px + 1em);
+    -moz-flex: 1 0 calc(200px + 1em);
+    -ms-flex: 1 0 calc(200px + 1em);
+    flex: 1 0 calc(200px + 1em);
+    box-sizing: border-box;
+    text-align: center; }
+    .comic-page-grid > li > a {
+      display: block;
+      padding: 0.5em;
+      min-width: 200px;
+      text-align: center; }
+      .comic-page-grid > li > a:visited {
+        border-style: dotted; }
+        .comic-page-grid > li > a:hover {
+          background: #ebebf2; }
+          .comic-page-grid > li > a > img {
+            display: block;
+            margin: 0 auto 0.33em;
+            background: #f6f5f8;
+            border: 1px solid #ebebf2;
+            box-shadow: 1px 1px 2px #ccc; }
+    .comic-page-grid > li.-elision {
+      -webkit-align-self: stretch;
+      -moz-align-self: stretch;
+      -ms-flex-item-align: stretch;
+      align-self: stretch;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .comic-page-grid > li.-elision > a {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -moz-box-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center; }
+    .comic-page-grid > li.chapter > a img {
+      margin-bottom: 0.5em;
+      box-shadow: 1px 1px 2px #ccc, 3px 3px 0 #aaa, 6px 6px 0 #ccc; }
+      .comic-page-grid > li.privileged > a img {
+        box-shadow: 0 0 0 2px #f9dc86; }
+
+.comic-page {
+  margin: 1em auto; }
+
+  .comic-page h3 {
+    font-size: 1.5em;
+    margin: 0;
+    font-family: serif;
+    font-weight: normal; }
+
+    .comic-page-controls {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      justify-content: space-between;
+      font-size: 1.33em;
+      margin: 1rem;
+      color: #999;
+      line-height: 1; }
+      .comic-page-controls .-combined {
+        font-size: 2em; }
+        .comic-page-controls .-prev, .comic-page-controls .-next {
+          -webkit-box-flex: 2;
+          -webkit-flex: 2;
+          -moz-box-flex: 2;
+          -moz-flex: 2;
+          -ms-flex: 2;
+          flex: 2; }
+          .comic-page-controls .-prev a, .comic-page-controls .-next a {
+            display: block;
+            text-decoration: none; }
+      .comic-page-controls .-next {
+        text-align: right; }
+        .comic-page-controls .-date {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          -moz-box-flex: 1;
+          -moz-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          text-align: center; }
+
+.comic-page-image-container {
+  margin: 1em auto;
+  text-align: center; }
+
+  .comic-page-image {
+    background: white;
+    padding: 3px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 1px 3px #e6e6e6; }
+
+    .gallery-archive-top-links {
+      text-align: center; }
+
+      table.gallery-archive-by-date {
+        width: 100%;
+        table-layout: fixed; }
+        table.gallery-archive-by-date td, table.gallery-archive-by-date th {
+          padding: 0.25em; }
+          table.gallery-archive-by-date th {
+            vertical-align: top; }
+            table.gallery-archive-by-date col.-month {
+              width: 8em; }
+              table.gallery-archive-by-date col.-folder {
+                width: 40%; }
+                table.gallery-archive-by-date col.-page {
+                  width: 60%; }
+                  table.gallery-archive-by-date th.-month {
+                    text-align: left; }
+                    table.gallery-archive-by-date th.-folder {
+                      text-align: left;
+                      font-weight: normal;
+                      font-style: italic; }
+                      table.gallery-archive-by-date tr.-new-month {
+                        border-top: 1px solid #7574ac; }
+                        table.gallery-archive-by-date tr.-new-year,
+                        table.gallery-archive-by-date tr:first-child {
+                          border-top-width: 3px; }
+                          table.gallery-archive-by-date tr.-folder-group-2 {
+                            background: #f5f5f9; }
+                            table.gallery-archive-by-date tr:hover {
+                              background: #eaeaf3; }
+
+.calendar {
+  margin-bottom: 1em;
+  text-align: center; }
+  .calendar td {
+    width: 2em;
+    border: 1px solid #e0e0e0; }
+    .calendar .calendar-month-0 {
+      background: white; }
+      .calendar .calendar-month-1 {
+        background: #f6f6f6; }
+        .calendar .calendar-month-name {
+          transform: rotate(-90deg); }
+          .calendar .calendar-today {
+            background: #ff6; }
+
+.js-markdown-preview {
+  display: flex;
+  margin-bottom: 1em; }
+  .js-markdown-preview textarea {
+    display: block;
+    flex: 1;
+    height: 16em; }
+    .js-markdown-preview .js-markdown-preview--preview {
+      flex: 1;
+      margin-left: 1em; }
+
+body.dragging, body.dragging * {
+  cursor: move !important; }
+
+  .dragged {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 32000; }
+
+    ol.comic-folder-hierarchy, ol.comic-folder-hierarchy ol {
+      list-style-type: none; }
+      ol.comic-folder-hierarchy p, ol.comic-folder-hierarchy li {
+        margin: 0.25em 0; }
+        ol.comic-folder-hierarchy p {
+          padding: 0.17em 0.33em;
+          background: #f0f0f0;
+          border: 1px solid #d8d8d8; }
+
+ol.comic-folder-hierarchy li.placeholder {
+  position: relative; }
+  ol.comic-folder-hierarchy li.placeholder::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: -0.375em;
+    top: -0.375em;
+    border: 0.25em solid transparent;
+    border-left-color: red;
+    border-right: none; }
+    ol.comic-folder-hierarchy li.placeholder::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 0.125em;
+      top: -0.1875em;
+      background: red; }
+
