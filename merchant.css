@@ -1,5 +1,5 @@
 body {
-  background: url(/static/images/global-background-squares.png) #dbd1e0 fixed; }
+  background: url(background-squares) #dbd1e0 fixed; }
 
   body > header {
     padding: 0.5em;
@@ -128,7 +128,7 @@ body {
   justify-content: center;
   margin: 0 0.5em;
   background-color: #817390;
-  background-image: url(/static/images/global-title-background-full.png);
+  background-image: url(background-full);
   background-position: center, center;
   background-repeat: repeat; }
   .merchant-banner > img {
