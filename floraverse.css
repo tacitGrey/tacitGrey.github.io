@@ -8,13 +8,13 @@ body {
     .front-page-sidebar {
       margin-left: 1em; }
 
-      .floraverse-sidebar {
+      .merchant-sidebar {
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flexbox;
         display: flex; }
-        .floraverse-sidebar .floraverse-sidebar-merch {
+        .merchant-sidebar .merchant-sidebar-merch {
           -webkit-box-flex: 0 1 auto;
           -webkit-flex: 0 1 auto;
           -moz-box-flex: 0 1 auto;
@@ -39,27 +39,17 @@ body {
           justify-content: space-around;
           margin-right: 1em;
           background: #44436f; }
-          .floraverse-sidebar .floraverse-sidebar-merch a {
+          .merchant-sidebar .merchant-sidebar-merch a {
             display: block;
             margin: 1em;
             background: #f0d1f9; }
-            .floraverse-sidebar .floraverse-sidebar-merch img {
+            .merchant-sidebar .merchant-sidebar-merch img {
               display: block;
               width: 100%; }
-              .floraverse-sidebar .floraverse-sidebar-merch img:hover {
+              .merchant-sidebar .merchant-sidebar-merch img:hover {
                 opacity: 0.67; }
-        .floraverse-sidebar .floraverse-sidebar-hiveworks {
-          -webkit-box-flex: none;
-          -webkit-flex: none;
-          -moz-box-flex: none;
-          -moz-flex: none;
-          -ms-flex: none;
-          flex: none;
-          width: 160px; }
-          .floraverse-sidebar .floraverse-sidebar-hiveworks img {
-            width: 100%; }
 
-.floraverse-header {
+.merchant-header {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -75,7 +65,7 @@ body {
   -ms-flex-line-pack: start;
   align-content: flex-start; }
 
-  .floraverse-bush-left, .floraverse-bush-right {
+  .merchant-bush-left, .merchant-bush-right {
     -webkit-box-flex: none;
     -webkit-flex: none;
     -moz-box-flex: none;
@@ -105,7 +95,7 @@ body {
     align-items: center;
     padding: 0.5em;
     background: #cac6cf; }
-    .floraverse-bush-left > .-spacer, .floraverse-bush-right > .-spacer {
+    .merchant-bush-left > .-spacer, .merchant-bush-right > .-spacer {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
       -moz-box-flex: 1;
@@ -113,7 +103,7 @@ body {
       -ms-flex: 1;
       flex: 1; }
 
-.floraverse-banner {
+.merchant-banner {
   z-index: 0;
   -webkit-box-flex: 1 0;
   -webkit-flex: 1 0;
@@ -141,24 +131,24 @@ body {
   background-image: url(/static/images/global-title-background-full.png);
   background-position: center, center;
   background-repeat: repeat; }
-  .floraverse-banner > img {
+  .merchant-banner > img {
     -webkit-box-flex: none;
     -webkit-flex: none;
     -moz-box-flex: none;
     -moz-flex: none;
     -ms-flex: none;
     flex: none; }
-    .floraverse-banner .floraverse-banner--left {
+    .merchant-banner .merchant-banner--left {
       margin-right: -50px;
       margin-left: -30px; }
-      .floraverse-banner .floraverse-banner--logo {
+      .merchant-banner .merchant-banner--logo {
         padding: 2px 0; }
-        .floraverse-banner .floraverse-banner--right {
+        .merchant-banner .merchant-banner--right {
           margin-left: -110px;
           margin-bottom: -19px;
           margin-right: -40px; }
 
-.floraverse-bush-words {
+.merchant-bush-words {
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -166,7 +156,7 @@ body {
   -ms-flex: none;
   flex: none; }
 
-  .floraverse-button {
+  .merchant-button {
     -webkit-box-flex: none;
     -webkit-flex: none;
     -moz-box-flex: none;
@@ -192,36 +182,36 @@ body {
     height: 32px;
     transition: outline 0.2s linear;
     outline: 0 solid #9f72b1; }
-    .floraverse-button img {
+    .merchant-button img {
       display: block; }
-      .floraverse-button:hover {
+      .merchant-button:hover {
         outline: 2px solid #9f72b1; }
 
-.floraverse-button-deviantart {
+.merchant-button-deviantart {
   background: #3a6057; }
 
-  .floraverse-button-twitter {
+  .merchant-button-twitter {
     background: white; }
 
-    .floraverse-button-tumblr {
+    .merchant-button-tumblr {
       background: #160d4a; }
 
-      .floraverse-button-patreon {
+      .merchant-button-patreon {
         background: white; }
 
-        .floraverse-button-facebook {
+        .merchant-button-facebook {
           background: #324274; }
 
-          .floraverse-button-rss {
+          .merchant-button-rss {
             background: white; }
 
-            .floraverse-navbar {
+            .merchant-navbar {
               z-index: -1;
               margin-top: 0.5em;
               padding: 0.5em;
               color: white;
               background: #242254; }
-              .floraverse-navbar > ul {
+              .merchant-navbar > ul {
                 display: -webkit-box;
                 display: -webkit-flex;
                 display: -moz-flex;
@@ -242,13 +232,13 @@ body {
                 -moz-align-items: center;
                 align-items: center;
                 margin: 0; }
-                .floraverse-navbar > ul a, .floraverse-navbar > ul img {
+                .merchant-navbar > ul a, .merchant-navbar > ul img {
                   display: block; }
-                  .floraverse-navbar > ul > li {
+                  .merchant-navbar > ul > li {
                     opacity: 0.9;
                     transform-origin: center;
                     transition: 0.2s linear; }
-                    .floraverse-navbar > ul > li:hover {
+                    .merchant-navbar > ul > li:hover {
                       opacity: 1;
                       transform: scale(1.1); }
 
