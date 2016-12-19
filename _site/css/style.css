@@ -1,0 +1,30 @@
+.navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 18px;
+    background-color: lightskyblue;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .16)
+}
+
+.navbar > .panel {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+
+.navbar > .panel.main {
+    flex-grow: 1;
+}
+
+.navbar > .panel.social {
+    flex-shrink: 1
+}
