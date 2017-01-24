@@ -4,3 +4,11 @@ markdown: kramdown
 host: 0.0.0.0
 port: 8080
 gems:
+  - jekyll-sitemap
+  - jekyll-tidy
+  - jekyll-minifier
+jekyll-minifier:
+  exclude: '*.js'
+sass:
+  sass_dir: /_scss
+  style: compressed
