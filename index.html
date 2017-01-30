@@ -1,6 +1,9 @@
 ---
-layout: default
 ---
 
-<div class="comic-page">
-</div>
+<html>
+    <head>
+        {% assign url = (site.pages | where:"type","comic-page" | sort:"index" | last) %}
+        <meta http-equiv="refresh" content="0; URL='{{ url.permalink }}'" />
+    </head>
+</html>

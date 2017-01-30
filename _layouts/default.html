@@ -2,20 +2,21 @@
 ---
 
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include meta.html %}
     {% include stylesheets.html %}
     {% include scripts.html %}
     <title>Merchant</title>
   </head>
-  <body>
+  <body ontouchstart>
     <div class="background"></div>
     <div class="content">
       {% include banner.html %}
       {% include navbar.html %}
-      {{ content }}
+      <div class="page-content">
+        {{ content }}
+      </div>
     </div>
   </body>
 </html>
