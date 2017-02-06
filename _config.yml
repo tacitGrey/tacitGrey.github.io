@@ -7,8 +7,28 @@ gems:
   - jekyll-sitemap
   - jekyll-tidy
   - jekyll-minifier
+  - octopress-autoprefixer
 jekyll-minifier:
   exclude: '*.js'
 sass:
   sass_dir: /_scss
   style: compressed
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "comic-pages"
+      type: "pages"
+    values:
+      layout: "comic-page"
