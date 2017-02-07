@@ -9,7 +9,7 @@ layout: default
         {% for comicpage in comicpages %}
             <a href="{{ comicpage.permalink }}" class="page-block">
                 <img src="{{ comicpage.image | split:'.jpg' | first | append:'_thumb.jpg' }}" />
-            </div>
+            </a>
         {% endfor %}
     </div>
 </div>

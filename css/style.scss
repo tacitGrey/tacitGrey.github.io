@@ -200,11 +200,16 @@ h1, h2, h3, h4, h5, h6, p {
   >.page-grid {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     @include dimensions(100%, auto);
-    @include alignHorizontal(center);
+    @include alignHorizontal(space-around);
     padding: .25rem;
     >.page-block {
-      @include dimensions(10rem, 10rem);
+      min-width: 10rem;
+      max-width: 10rem;
+      min-height: 10rem;
+      max-height: 10rem;
+      margin: .5rem auto;
       @include alignVertical(center);
       @include alignHorizontal(center);
       @include filter(contrast(1) brightness(1));
