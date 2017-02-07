@@ -15,8 +15,11 @@ layout: default
         {% assign prevpage = comicpage %}
     {% endif %}
 {% endfor %}
-    
-<img class="comic-page" src="{{ page.image }}" alt="{{ page.alttext }}"> </img>
+
+<div class="comic-page">
+    <img src="{{ page.image }}" alt="{{ page.alttext }}" />
+</div>
+
 <div class="comic-navigation-bar">
     <a title="First" href="{{ firstpage.permalink }}"><img src="/images/much-lt.svg" /></a>
     <a title="Previous" 
