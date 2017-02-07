@@ -5,7 +5,7 @@ layout: default
 <div class="archive-box">
     <h1>Archive</h1>
     <div class="page-grid">
-        {% assign comicpages = (site.pages | where:"layout","comic-page" | sort) %}
+        {% assign comicpages = (site.pages | where:"layout","comic-page") %}
         {% for comicpage in comicpages %}
             <a href="{{ comicpage.permalink }}" class="page-block">
                 <img src="{{ comicpage.image | split:'.jpg' | first | append:'_thumb.jpg' }}" />
