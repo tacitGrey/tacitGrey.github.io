@@ -155,13 +155,11 @@ h1, h2, h3, h4, h5, h6, p {
     >img {
       user-select: none;
       @include userDrag(none);
+      transition: filter 0.25s, -webkit-filter 0.25s;
+      width: 2.25rem;
+      height: 2rem;
     }
     &:link {
-      >img {
-        transition: filter 0.25s, -webkit-filter 0.25s;
-        width: 2.25rem;
-        height: 2rem;
-      }
       &:hover>img {
         @include filter(brightness(1.5) drop-shadow(0 .0625rem .0625rem rgba(0, 0, 0, .32)));
       }
