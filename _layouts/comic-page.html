@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+{% assign comicpages = (site.pages | where:"layout","comic-page") %}
+{% assign firstpage = comicpages | first %}
+{% assign lastpage = comicpages | last %}
+{% assign previndex = page.pageindex | minus:1 %}
+{% assign nextindex = page.pageindex | plus:1 %}
+{% for comicpage in comicpages %}
+    {% if comicpage.pageindex == nextindex %}
+        {% assign nextpage = comicpage %}
+    {% endif %}
+    {% if comicpage.pageindex == previndex %}
+        {% assign prevpage = comicpage %}
+    {% endif %}
+{% endfor %}
+    
+<img class="comic-page" src="{{ page.image }}"></img>
+<div class="comic-navigation-bar">
+    <a title="First" href="{{ firstpage.permalink }}"><img src="/images/much-lt.svg" /></a>
+    <a title="Previous" 
+    {% if prevpage %}
+    href="{{ prevpage.permalink }}"
+    {% endif %}><img src="/images/lt.svg" /></a>
+    <a title="Archive" href="/archive"><img src="/images/diamond.svg" /></a>
+    <a title="Next"
+    {% if nextpage %}
+    href="{{ nextpage.permalink }}"
+    {% endif %}
+    ><img src="/images/gt.svg" /></a>
+    <a title="Last" href="{{ lastpage.permalink }}"><img src="/images/much-gt.svg" /></a>
+</div>
+<div class="info-box">
+    <div class="social-panel">
+        
+    </div>
+    <div class="info-panel">
+        <h1>
+            {{ page.pagetitle }}
+        </h1>
+        <p>
+            {{ page.pagedescription }}
+        </p>
+    </div>
+</div>

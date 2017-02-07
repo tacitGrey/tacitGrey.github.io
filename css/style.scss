@@ -1,0 +1,278 @@
+---
+---
+/* 
+  see those two sets of lines?
+  those need to be there, and they need to look like this:
+  ---
+  ---
+  or the code won't compile.
+*/
+
+@import "mixins";
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: "Source Serif Pro", serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  @include alignHorizontal(center);
+  background-color: #847B5E;
+  margin: auto;
+  >.background {
+    position: fixed;
+    background-color: #847B5E;
+    @include geometry(0, 0, 100%, 100%);
+  }
+  >.content {
+    max-width: 64rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    >div {
+      position: relative;
+      box-sizing: border-box;
+    }
+  }
+  color: #212121;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: .25rem;
+}
+
+.banner {
+  width: 100%;
+  height: 8rem;
+  @include alignVertical(center);
+  display: flex;
+  background-color: #ACA586;
+  position: relative;
+  box-shadow: 0px .5rem 1rem rgba(0, 0, 0, .16);
+  .logo {
+    position: relative;
+    margin: auto 2rem;
+    img {
+      width: 17.5rem;
+      height: 5rem;
+      @include userDrag(none);
+      user-select: none;
+      transition: filter 0.25s ease;
+      &:hover, &:focus {
+        @include filter(brightness(1.5));
+      }
+      &:active {
+        @include filter(brightness(2));
+      }
+    }
+  }
+}
+
+.navbar {
+  background-color: #D3CEAE;
+  display: flex;
+  position: relative;
+  @include geometry(0, 0, 100%, 3rem);
+  @include alignVertical(center);
+  box-sizing: border-box;
+  box-shadow: 0px .5rem 1rem rgba(0, 0, 0, .16);
+  z-index: 4;
+  width: 100%;
+  max-width: 60rem;
+  margin: auto;
+  .link {
+    display: flex;
+    @include alignVertical(center);
+    @include alignHorizontal(center);
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: #212121;
+    &:link {
+      transition: background .25s ease;
+      &:hover {
+        background-color: rgba(255, 255, 255, .16);
+      }
+      &:active {
+        background-color: rgba(255, 255, 255, .32);
+      }
+    }
+    &:not([href]) {
+      opacity: 0.5;
+      cursor: default;
+      user-select: none;
+    }
+  }
+  .divider {
+    user-select: none;
+    cursor: default;
+  }
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  @include alignVertical(center);
+  @include alignHorizontal(center);
+  width: calc(100% - 1rem);
+  max-width: 60rem;
+  margin: auto;
+  position: relative;
+  >div {
+    box-sizing: border-box;
+  }
+}
+
+.comic-page {
+  position: relative;
+  width: 100%;
+  margin: 1rem auto;
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, .16);
+  background-color: #bcb28e;
+  @include userDrag(none);
+  user-select: none;
+}
+
+.comic-navigation-bar {
+  margin: 1rem auto;
+  display: flex;
+  background-color: #bcb28e;
+  padding: .5rem;
+  border-radius: .5rem;
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .12);
+  @include alignHorizontal(center);
+  >a {
+    margin: 0 .5rem;
+    font-size: 2rem;
+    width: 2.25rem;
+    height: 2rem;
+    @include alignVertical(center);
+    >img {
+      user-select: none;
+      @include userDrag(none);
+    }
+    &:link {
+      >img {
+        transition: filter 0.25s, -webkit-filter 0.25s;
+        width: 2.25rem;
+        height: 2rem;
+      }
+      &:hover>img {
+        @include filter(brightness(1.5) drop-shadow(0 .0625rem .0625rem rgba(0, 0, 0, .32)));
+      }
+      &:active>img {
+        @include filter(brightness(2) drop-shadow(0 .125rem .125rem rgba(0, 0, 0, .64)));
+      }
+    }
+    &:not([href]) {
+      opacity: 0.5;
+      user-select: none;
+    }
+  }
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  @include dimensions(100%, auto);
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #bcb28e;
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .12);
+}
+
+.info-box {
+  @extend .content-box;
+  >.info-panel {
+    p {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.archive-box {
+  @extend .content-box;
+  >.page-grid {
+    display: flex;
+    flex-direction: row;
+    @include dimensions(100%, auto);
+    @include alignHorizontal(center);
+    padding: .25rem;
+    >.page-block {
+      @include dimensions(10rem, 10rem);
+      @include alignVertical(center);
+      @include alignHorizontal(center);
+      @include filter(contrast(1) brightness(1));
+      transition: filter .25s ease, -webkit-filter .25s ease, box-shadow .25s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .16);
+      border-radius: .25rem;
+      >img {
+        position: absolute;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+        @include userDrag(none);
+      }
+      &:hover, &:focus {
+        @include filter(contrast(0.9) brightness(1.1));
+        box-shadow: 0 .25rem .5rem rgba(0, 0, 0, .24);
+      }
+      &:active {
+        @include filter(contrast(0.75) brightness(1.25));
+        box-shadow: 0 .3rem .6rem rgba(0, 0, 0, .32);
+      }
+    }
+  }
+}
+
+.donate-box {
+  @extend .content-box;
+  >.donate-banner {
+    position: relative;
+    display: flex;
+    @include alignVertical(center);
+    @include alignHorizontal(center);
+    >img {
+      width: 100%;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  &:focus {
+    outline: 0;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi), (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi), (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (max-width: 360px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (max-width: 240px) { 
+  html {
+    font-size: 12px;
+  }
+}

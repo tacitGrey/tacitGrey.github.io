@@ -1,0 +1,63 @@
+@mixin origin($top, $left) {
+  top: $top;
+  left: $left;
+}
+
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin verboseWidth($minwidth, $width, $maxwidth) {
+  min-width: $minwidth;
+  width: $width;
+  max-width: $maxwidth;
+}
+
+@mixin verboseHeight($minheight, $height, $maxheight) {
+  min-height: $minheight;
+  height: $height;
+  max-height: $maxheight;
+}
+
+@mixin verboseDimensions($minwidth, $width, $maxwidth, $minheight, $height, $maxheight) {
+  min-width: $minwidth;
+  width: $width;
+  max-width: $maxwidth;
+  min-height: $minheight;
+  height: $height;
+  max-height: $maxheight;
+}
+
+@mixin geometry($top, $left, $width, $height) {
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+@mixin filter($filters) {
+  filter: $filters;
+  -webkit-filter: $filters;
+}
+
+@mixin alignHorizontal($alignment) {
+  -webkit-justify-content: $alignment;
+  -ms-flex-pack: $alignment;
+  justify-content: $alignment;
+}
+
+@mixin alignVertical($alignment) {
+  -webkit-align-items: $alignment;
+  -ms-flex-align: $alignment;
+  align-items: $alignment;
+}
+
+@mixin animation($animations...) {
+  animation: $animations;
+  -webkit-animation: $animations;
+}
+
+@mixin userDrag($mode) {
+  -webkit-user-drag: $mode;
+}
